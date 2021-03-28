@@ -1,4 +1,5 @@
 package com.example.LyaposBot.model.events;
+import com.example.LyaposBot.model.supports.AnswerCreator;
 
 import java.util.Map;
 
@@ -19,7 +20,7 @@ public class Message extends Event {
     @Override
     public String createAnswer() {
 
-        return "TimurHuiSosi";
+        return AnswerCreator.create(this);
     }
 
 

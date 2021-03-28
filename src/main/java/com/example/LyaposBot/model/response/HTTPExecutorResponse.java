@@ -17,7 +17,7 @@ public class HTTPExecutorResponse {
     public void execute(String url) throws IOException {
         final HttpUriRequest httpGet = new HttpGet(url);
         try {
-            httpclient.execute(httpGet);
+            httpclient.execute(httpGet);//TODO: fix the request is repeated several times.
         } catch (IOException e) {
             e.printStackTrace();
         }
